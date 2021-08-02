@@ -7,7 +7,6 @@ public class AmazonHomePage {
 
     private WebDriver driver;
     private By searchField = By.id("twotabsearchtextbox");
-    private By itemToSearch = By.id("best baby sunscreen");
     private By clickSearchButton = By.id("nav-search-submit-button");
 
     public AmazonHomePage(WebDriver driver) {
@@ -16,7 +15,6 @@ public class AmazonHomePage {
 
     public SearchResultPage clickSearchField() {
 
-        driver.findElement(searchField).click();
         driver.findElement(searchField).sendKeys("best baby sunscreen");
         driver.findElement(clickSearchButton).click();
         return new SearchResultPage(driver);
